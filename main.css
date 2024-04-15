@@ -1,0 +1,199 @@
+/* Estilo básico */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e0e0e0; /* um cinza claro para o fundo para melhorar a legibilidade */
+    color: #333;
+}
+
+header {
+    background-color: #1a1a1a; /* um cinza escuro para o cabeçalho */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header img {
+    width: 500px; /* tamanho ajustado para o logo */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #4a90e2; /* ou qualquer cor de fundo desejada */
+    color: #fff;
+}
+
+.hero img {
+    width: 50%; /* ou qualquer outra porcentagem que se adeque ao seu design */
+    max-width: 600px; /* opcional, para garantir que a imagem não fique muito grande */
+    height: auto;
+    float: left;
+}
+
+.hero-content {
+    width: 50%; /* isso faz com que o conteúdo de texto ocupe o restante do espaço */
+    padding-left: 20px; /* adicione um pouco de espaço entre a imagem e o texto */
+}
+
+@media (max-width: 768px) { /* ajuste para telas menores */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img,
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px 0;
+    }
+}
+
+
+button {
+    background-color: #f1c40f; /* um amarelo vibrante para botões */
+    border: none;
+    color: #333;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+section {
+    padding: 30px;
+    text-align: center;
+}
+
+#sinopse, #personagens, #galeria {
+    background: #fff;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.character-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.character {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 240px; /* aumentado para melhorar a apresentação dos personagens */
+}
+.character img {
+    width: 150px; /* tamanho fixo para a largura */
+    height: 150px; /* tamanho fixo para a altura, igual à largura para um círculo perfeito */
+    border-radius: 50%; /* faz com que a imagem fique redonda */
+    object-fit: cover; /* garante que a imagem cubra a área definida sem perder a proporção */
+    display: block; /* isso pode ajudar se a imagem não estiver centralizada */
+    margin: auto; /* isso centraliza a imagem no container caso ela tenha display:block */
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#sinopse {
+    background: #fff;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Controla a largura máxima da sinopse */
+}
+
+#sinopse h2 {
+    text-align: center;
+    color: #4a90e2; /* Cor que combina com o tema da série */
+    margin-bottom: 20px;
+    font-size: 2em; /* Tamanho do título da seção aumentado */
+}
+
+#sinopse p {
+    text-align: justify; /* Alinha o texto justificado para uma leitura mais confortável */
+    line-height: 1.6; /* Espaçamento entre as linhas para melhorar a legibilidade */
+    font-size: 1.1em; /* Tamanho ligeiramente maior para o texto da sinopse */
+    color: #333; /* Cor escura para o texto para contraste suficiente */
+}
+
+@media (max-width: 768px) {
+    #sinopse {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    #sinopse h2 {
+        font-size: 1.5em; /* Tamanho do título ajustado para dispositivos menores */
+    }
+
+    #sinopse p {
+        text-align: left; /* Em dispositivos móveis, o texto alinhado à esquerda pode ser mais legível */
+    }
+}
+
+/* Faz o vídeo responsivo */
+#video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Proporção de 16:9 */
+}
+
+#video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
